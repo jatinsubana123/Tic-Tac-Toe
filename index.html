@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe — Neon AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <main class="app">
+    <header class="hero">
+      <div class="eyebrow">
+        <span class="pulse-dot"></span>
+        THE CLASSIC, REIMAGINED
+      </div>
+      <h1>TIC <span>·</span> TAC <span>·</span> TOE</h1>
+      <p>Make your move. Outsmart the machine.</p>
+    </header>
+
+    <section class="game-panel">
+      <div class="mode-row">
+        <div>
+          <span class="label">GAME MODE</span>
+          <p class="mode-caption">Play solo against the computer</p>
+        </div>
+        <label class="mode-switch">
+          <input type="checkbox" id="twoPlayerToggle">
+          <span class="switch-track"></span>
+          <span class="switch-text">2 Players</span>
+        </label>
+      </div>
+
+      <div class="topline">
+        <div>
+          <span class="label">NOW PLAYING</span>
+          <h2 id="status" aria-live="polite">Your turn (X)</h2>
+        </div>
+        <div class="turn-badge" id="turnBadge">
+          <span id="turnSymbol">X</span>
+          <small id="turnLabel">YOUR TURN</small>
+        </div>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score-card score-x active" id="scoreCardX">
+          <span class="player-icon">X</span>
+          <span class="player-name" id="nameX">YOU · X</span>
+          <strong id="scoreX">0</strong>
+        </div>
+        <div class="score-card score-draw">
+          <span class="player-icon">＝</span>
+          <span class="player-name">DRAWS</span>
+          <strong id="scoreDraw">0</strong>
+        </div>
+        <div class="score-card score-o" id="scoreCardO">
+          <span class="player-icon">O</span>
+          <span class="player-name" id="nameO">COMPUTER · O</span>
+          <strong id="scoreO">0</strong>
+        </div>
+      </div>
+
+      <div class="board" role="group" aria-label="Tic Tac Toe board">
+        <button class="cell" data-index="0" aria-label="Cell 1, empty"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2, empty"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3, empty"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4, empty"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5, empty"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6, empty"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7, empty"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8, empty"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9, empty"></button>
+      </div>
+
+      <div class="button-row">
+        <button id="restart" class="btn btn-main">
+          <span>↻</span> Restart Round
+        </button>
+        <button id="resetScores" class="btn btn-quiet">
+          Reset Scores
+        </button>
+      </div>
+
+      <p class="hint" id="hint">
+        You are X. Get three in a row to win.
+      </p>
+    </section>
+
+    <footer>
+      DESIGNED TO PLAY <span>✦</span>
+      BUILT WITH HTML, CSS & JAVASCRIPT
+    </footer>
+  </main>
+</body>
+</html>
